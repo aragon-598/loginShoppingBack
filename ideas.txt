@@ -1,0 +1,20 @@
+Modelos
+    Producto:
+        id
+        nombre
+        stock
+        precio
+
+    Compra
+        id
+        id_usuario
+        id_producto
+        cantidad
+        total
+    
+    usuario
+        id
+        nombre
+        apellido
+        username
+        password
