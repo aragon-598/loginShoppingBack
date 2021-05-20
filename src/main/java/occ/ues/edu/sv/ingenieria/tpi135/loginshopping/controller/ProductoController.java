@@ -41,8 +41,10 @@ public class ProductoController {
     @PutMapping("/updateProducto")
     public ResponseEntity updateCompra(@RequestBody Producto producto){
         boolean ok =productoService.updateProducto(producto);
-        if(ok)
-            return ResponseEntity.ok().build();
+        if(ok){
+            return ResponseEntity.ok("Se actualizo el producto");
+        }
+            
         
         return ResponseEntity.notFound().build();  
     }

@@ -1,5 +1,7 @@
 package occ.ues.edu.sv.ingenieria.tpi135.loginshopping.model;
 
+import java.math.BigDecimal;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 

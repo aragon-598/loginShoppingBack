@@ -14,7 +14,7 @@ public class Compra {
     private String username;
     private String id_producto;
     private int cantidad;
-    private BigDecimal total;
+    private float total;
 
 
     public Compra() {
@@ -52,11 +52,11 @@ public class Compra {
         this.cantidad = cantidad;
     }
 
-    public BigDecimal getTotal() {
+    public float getTotal() {
         return this.total;
     }
 
-    public void setTotal(BigDecimal total) {
+    public void setTotal(float total) {
         this.total = total;
     }
 

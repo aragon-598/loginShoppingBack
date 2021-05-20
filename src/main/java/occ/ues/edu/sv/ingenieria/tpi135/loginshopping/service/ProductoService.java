@@ -29,7 +29,9 @@ public class ProductoService {
             if (pexistente!=null) {
                 pexistente.setNombre(producto.getNombre());
                 pexistente.setPrecio(producto.getPrecio());
-                pexistente.setStock(producto.getStock());  
+                pexistente.setStock(producto.getStock());
+                
+                productoRepository.save(pexistente);
                 
                 return true;
             }
