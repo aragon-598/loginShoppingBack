@@ -1,5 +1,8 @@
 package occ.ues.edu.sv.ingenieria.tpi135.loginshopping.security.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -8,15 +11,23 @@ public class User {
 
     @Id
     private String id_user;
-    
-    
+
     private String nombre;
     private String apellido;
     private String username;
     private String password;
+    private Set<Rol> roles = new HashSet<>();
 
 
     public User() {
+    }
+
+
+    public User(String nombre, String apellido, String username, String password) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.username = username;
+        this.password = password;
     }
 
     public String getId_user() {
@@ -57,6 +68,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Set<Rol> getRoles() {
+        return this.roles;
+    }
+
+    public void setRoles(Set<Rol> roles) {
+        this.roles = roles;
     }
 
 }
